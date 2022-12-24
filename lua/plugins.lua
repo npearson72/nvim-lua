@@ -22,13 +22,9 @@ require('packer').startup(function(use)
 
   use({ 'preservim/vim-colors-pencil' })
 
-  use({
-    'nvim-tree/nvim-tree.lua',
-    requires = {
-      'nvim-tree/nvim-web-devicons',
-    },
-    tag = 'nightly'
-  })
+  use({ 'neoclide/coc.nvim', branch = 'release' })
+
+  use({ 'gcmt/taboo.vim' })
 
   use({ 'numToStr/Comment.nvim' })
 
