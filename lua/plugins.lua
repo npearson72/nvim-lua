@@ -23,6 +23,16 @@ require('packer').startup(function(use)
   use({ 'preservim/vim-colors-pencil' })
 
   use({
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    tag = 'nightly'
+  })
+
+  use({ 'numToStr/Comment.nvim' })
+
+  use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }

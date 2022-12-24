@@ -26,3 +26,10 @@ vim.keymap.set('n', 'ws', '<c-w>x')
 vim.keymap.set('n', 'wr', '<c-w>r')
 vim.keymap.set('n', 'wR', '<c-w>R')
 vim.keymap.set('n', 'wo', ':ZoomToggle<cr>')
+
+-- Select all
+vim.keymap.set('n', '<c-a>', 'ggVG')
+
+-- Copy & paste to clipboard
+vim.keymap.set('v', '<leader>y', '"*y')
+vim.keymap.set('n', '<leader>p', '"*p')
