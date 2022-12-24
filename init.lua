@@ -1,2 +1,3 @@
 require('main')
-print('hello')
+require('mappings')
+require('plugins')
