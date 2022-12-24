@@ -30,6 +30,9 @@ vim.keymap.set('n', 'wo', ':ZoomToggle<cr>')
 -- Select all
 vim.keymap.set('n', '<c-a>', 'ggVG')
 
+-- Remove search highlight
+vim.keymap.set('n', '<leader><space>', ':noh<cr>')
+
 -- Copy & paste to clipboard
 vim.keymap.set('v', '<leader>y', '"*y')
 vim.keymap.set('n', '<leader>p', '"*p')
