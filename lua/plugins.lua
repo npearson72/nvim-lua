@@ -20,6 +20,14 @@ require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
 
+  use({ 'preservim/vim-colors-pencil' })
+
+  use({
+    'nvim-telescope/telescope.nvim',
+    tag = '0.1.0',
+    requires = { { 'nvim-lua/plenary.nvim' } }
+  })
+
   if is_bootstrap then
     require('packer').sync()
   end
