@@ -2,6 +2,8 @@ vim.opt.termguicolors = true
 
 vim.cmd([[ colorscheme pencil ]])
 
+-- Coc
+
 vim.api.nvim_set_hl(0, 'CocInfoSign', {
   ctermfg = 03,
   ctermbg = nil,
@@ -82,3 +84,27 @@ vim.api.nvim_set_hl(0, 'CocGitDelete', {
 })
 
 vim.api.nvim_set_hl(0, 'CocGitDeleteChange', { link = CocGitDelete } )
+
+
+-- Taboo
+
+vim.api.nvim_set_hl(0, 'TabLine', {
+  ctermfg = 238,
+  ctermbg = 235,
+  fg = '#444444',
+  bg = '#262626'
+})
+
+vim.api.nvim_set_hl(0, 'TabLineFill', {
+  ctermfg = 235,
+  ctermbg = 235,
+  fg = '#262626',
+  bg = '#262626'
+})
+
+vim.api.nvim_set_hl(0, 'TabLineSel', {
+  ctermfg = 2,
+  ctermbg = nil,
+  fg = '#10a778',
+  bg = nil
+})
