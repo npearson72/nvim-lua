@@ -22,6 +22,34 @@ require('packer').startup(function(use)
 
   use({ 'preservim/vim-colors-pencil' })
 
+  -- use({ 'jose-elias-alvarez/null-ls.nvim' })
+
+use { -- LSP Configuration & Plugins
+    'neovim/nvim-lspconfig',
+    requires = {
+      -- Automatically install LSPs to stdpath for neovim
+      'williamboman/mason.nvim',
+      'williamboman/mason-lspconfig.nvim',
+
+      -- Useful status updates for LSP
+      'j-hui/fidget.nvim',
+
+      -- Additional lua configuration, makes nvim stuff amazing
+      'folke/neodev.nvim',
+    },
+  }
+
+  use {'nvim-telescope/telescope-ui-select.nvim' }
+
+  use { -- Autocompletion
+    'hrsh7th/nvim-cmp',
+    requires = {
+      'hrsh7th/cmp-nvim-lsp',
+      -- 'L3MON4D3/LuaSnip',
+      -- 'saadparwaiz1/cmp_luasnip'
+    }
+  }
+
   use({
     'nvim-tree/nvim-tree.lua',
     requires = {
@@ -29,6 +57,8 @@ require('packer').startup(function(use)
     },
     tag = 'nightly'
   })
+
+  use({ 'gcmt/taboo.vim' })
 
   use({ 'numToStr/Comment.nvim' })
 
