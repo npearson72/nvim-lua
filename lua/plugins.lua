@@ -18,7 +18,7 @@ end
 
 require('packer').startup(function(use)
   -- Package manager
-  use 'wbthomason/packer.nvim'
+  use({ 'wbthomason/packer.nvim' })
 
   use({ 'preservim/vim-colors-pencil' })
 
