@@ -7,3 +7,5 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 vim.opt.swapfile = false
 vim.opt.undofile = true
+vim.opt.backupdir = vim.env.XDG_DATA_HOME .. "/nvim/backup//"
+vim.opt.backup = true
