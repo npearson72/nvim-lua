@@ -69,8 +69,8 @@ local opts = {
 }
 
 vim.keymap.set('i', '<tab>', [[coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? '<tab>' : coc#refresh()]], opts)
-vim.keymap.set('i', '<s-tab>', [[coc#pum#visible() ? coc#pum#prev(1) : '\<c-h>']], opts)
-vim.keymap.set('i', '<c-j>', [[coc#pum#visible() ? coc#pum#confirm() : '\<c-g>u\<cr>\<c-r>=coc#on_enter()\<cr>']], opts)
+vim.keymap.set('i', '<s-tab>', [[coc#pum#visible() ? coc#pum#prev(1) : '<c-h>']], opts)
+vim.keymap.set('i', '<c-j>', [[coc#pum#visible() ? coc#pum#confirm() : '<c-g>u<cr>\<c-r>=coc#on_enter()<cr>']], opts)
 
 vim.keymap.set('i', '<c-k>', 'coc#refresh()', { silent = true, expr = true })
 

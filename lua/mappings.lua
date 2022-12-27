@@ -42,3 +42,19 @@ vim.keymap.set('n', 't', '<esc>:tabnew<cr>')
 vim.keymap.set('n', 'T', '<esc><c-w>T')
 vim.keymap.set('n', '{', '<esc>gT')
 vim.keymap.set('n', '}', '<esc>gt')
+
+-- Drag block left/right/up/down
+vim.keymap.set('v', '<s-l>', '>gv')
+vim.keymap.set('v', '<s-h>', '<gv')
+vim.keymap.set('v', '<s-j>', ':m\'>+<cr>gv')
+vim.keymap.set('v', '<s-k>', ':m-2<cr>gv')
+
+-- Keep search matches in the middle of the window
+vim.keymap.set('n', 'n', 'nzzzv')
+vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- Toggle relative line numbers in visual mode
+vim.keymap.set('n', 'v', 'v:<c-u>ToggleRelativeLineNumbers on<cr>gv', { silent = true })
+vim.keymap.set('n', 'V', 'V0:<c-u>ToggleRelativeLineNumbers on<cr>gv', { silent = true })
+vim.keymap.set('n', '<c-v>', '<c-v>:<c-u>ToggleRelativeLineNumbers on<cr>gv', { silent = true })
+vim.keymap.set('', '<esc>', '<esc>:ToggleRelativeLineNumbers off<cr>', { silent = true, noremap = true })
