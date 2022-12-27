@@ -1,7 +1,7 @@
 vim.opt.termguicolors = true
 vim.opt.colorcolumn = '80'
 
-vim.cmd([[ colorscheme pencil ]])
+vim.cmd([[ colorscheme pencil ]], { silent = true, bang = true })
 
 local options = {
   -- General
