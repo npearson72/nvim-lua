@@ -17,12 +17,14 @@ end,
 
 vim.api.nvim_create_user_command('ToggleRelativeLineNumbers',
 function(params)
-  if params.args == 'on' then
-    vim.opt.number = false
-    vim.opt.relativenumber = true
-  else
-    vim.opt.number = true
-    vim.opt.relativenumber = false
+  if vim.bo.filetype ~= 'coc-explorer' then
+    if params.args == 'on' then
+      vim.opt.number = false
+      vim.opt.relativenumber = true
+    else
+      vim.opt.number = true
+      vim.opt.relativenumber = false
+    end
   end
 end,
 { nargs='*' })

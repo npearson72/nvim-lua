@@ -1,6 +1,7 @@
 vim.opt.autoindent = true
 vim.opt.backspace = 'indent,eol,start'
 vim.opt.completeopt = 'longest,menuone,preview'
+vim.opt.history = 1000
 vim.opt.mouse = nil
 vim.opt.number = true
 vim.opt.tabstop = 2
@@ -12,3 +13,8 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.backupdir = vim.env.XDG_DATA_HOME .. "/nvim/backup//"
 vim.opt.backup = true
+vim.opt.numberwidth = 1 -- Reduce width of number line
+vim.opt.smartindent = true
+vim.opt.scrolloff = 3
+vim.opt.showbreak = '↪'
+vim.opt.visualbell = true
