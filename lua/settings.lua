@@ -1,5 +1,8 @@
+vim.opt.autoindent = true
+vim.opt.backspace = 'indent,eol,start'
+vim.opt.completeopt = 'longest,menuone,preview'
 vim.opt.mouse = nil
-vim.opt.nu = true
+vim.opt.number = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
