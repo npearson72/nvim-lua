@@ -26,7 +26,11 @@ require('packer').startup(function(use)
 
   use({ 'gcmt/taboo.vim' })
 
-  use({ 'numToStr/Comment.nvim' })
+  use({ 'tpope/vim-fugitive' })
+  use({ 'tpope/vim-commentary' })
+  use({ 'tpope/vim-endwise' })
+  use({ 'tpope/vim-projectionist' })
+  use({ 'tpope/vim-surround' })
 
   use({
     'nvim-telescope/telescope.nvim',
