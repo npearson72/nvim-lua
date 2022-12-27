@@ -1,4 +1,5 @@
-require('main')
-require('mappings')
 require('plugins')
 require('settings')
+require('mappings')
+require('autocmds')
+require('usercmds')

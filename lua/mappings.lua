@@ -25,13 +25,13 @@ vim.keymap.set('n', 'wK', '<c-w>K')
 vim.keymap.set('n', 'ws', '<c-w>x')
 vim.keymap.set('n', 'wr', '<c-w>r')
 vim.keymap.set('n', 'wR', '<c-w>R')
-vim.keymap.set('n', 'wo', ':ZoomToggle<cr>')
+vim.keymap.set('n', 'wo', ':ZoomToggle<cr>', { silent = true })
 
 -- Select all
 vim.keymap.set('n', '<c-a>', 'ggVG')
 
 -- Remove search highlight
-vim.keymap.set('n', '<leader><space>', ':noh<cr>')
+vim.keymap.set('n', '<leader><space>', ':noh<cr>', { silent = true })
 
 -- Copy & paste to clipboard
 vim.keymap.set('v', '<leader>y', '"*y')

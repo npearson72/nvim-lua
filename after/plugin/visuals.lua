@@ -1,13 +1,27 @@
 vim.opt.termguicolors = true
+vim.opt.colorcolumn = '80'
 
 vim.cmd([[ colorscheme pencil ]])
 
 local options = {
-  -- Coc
+  -- General
+  ColorColumn = {
+    ctermbg = 235,
+    bg = '#262626'
+  },
 
+  CursorColumn = {
+    link = 'ColorColumn'
+  },
+
+  CursorLine = {
+    link = 'ColorColumn'
+  },
+
+  -- Coc
   CocInfoSign = {
     ctermfg = 03,
-    fg = '#a89c14',
+    fg = '#a89c14'
   },
 
   CocInfoHighlight = {
@@ -17,7 +31,7 @@ local options = {
 
   CocWarningSign = {
     ctermfg = 167,
-    fg = '#d75f5f',
+    fg = '#d75f5f'
   },
 
   CocWarningHighlight = {
@@ -27,7 +41,7 @@ local options = {
 
   CocErrorSign = {
     ctermfg = 01,
-    fg = '#c30771',
+    fg = '#c30771'
   },
 
   CocErrorHighlight = {
@@ -47,7 +61,7 @@ local options = {
 
   CocInfoFloat = {
     ctermfg = 251,
-    fg = '#c6c6c6',
+    fg = '#c6c6c6'
   },
 
   CocWarningFloat = {
@@ -60,17 +74,17 @@ local options = {
 
   CocGitAdd = {
     ctermfg = 2,
-    fg = '#10a778',
+    fg = '#10a778'
   },
 
   CocGitChange = {
     ctermfg = 3,
-    fg = '#a89c14',
+    fg = '#a89c14'
   },
 
   CocGitDelete = {
     ctermfg = 9,
-    fg = '#e32791',
+    fg = '#e32791'
   },
 
   CocGitDeleteChange = {
