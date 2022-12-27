@@ -1,4 +1,4 @@
 require('plugins')
 require('settings')
-require('commands')
+require('autocommands')
 require('mappings')

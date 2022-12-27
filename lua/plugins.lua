@@ -34,6 +34,11 @@ require('packer').startup(function(use)
   use({ 'tpope/vim-projectionist' })
   use({ 'tpope/vim-surround' })
 
+  use({ 'godlygeek/tabular' })
+  use({ 'mbbill/undotree' })
+
+  use({ 'mg979/vim-visual-multi', branch = 'master' })
+
   use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
