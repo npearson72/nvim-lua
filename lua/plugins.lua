@@ -20,6 +20,8 @@ require('packer').startup(function(use)
   -- Package manager
   use({ 'wbthomason/packer.nvim' })
 
+  use({ 'github/copilot.vim' })
+
   use({ 'preservim/vim-colors-pencil' })
 
   use({ 'neoclide/coc.nvim', branch = 'release' })
