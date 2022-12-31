@@ -20,35 +20,44 @@ require('packer').startup(function(use)
   -- Package manager
   use({ 'wbthomason/packer.nvim' })
 
-  use({ 'github/copilot.vim' })
-
+  -- UI/UX
   use({ 'preservim/vim-colors-pencil' })
-
-  use({ 'neoclide/coc.nvim', branch = 'release' })
-
   use({
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   })
-
   use({ 'gcmt/taboo.vim' })
 
-  use({ 'tpope/vim-fugitive' })
-  use({ 'tpope/vim-commentary' })
-  use({ 'tpope/vim-endwise' })
-  use({ 'tpope/vim-projectionist' })
-  use({ 'tpope/vim-surround' })
+  -- Syntax highlighting
+  use({
+    'nvim-treesitter/nvim-treesitter',
+    run = function()
+      pcall(require('nvim-treesitter.install').update { with_sync = true })
+    end,
+  })
 
-  use({ 'godlygeek/tabular' })
-  use({ 'mbbill/undotree' })
-
-  use({ 'mg979/vim-visual-multi', branch = 'master' })
-
+  -- File management, search, navigation
   use({
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
   })
+
+  -- Autocompletion
+  use({ 'github/copilot.vim' })
+  use({ 'neoclide/coc.nvim', branch = 'release' })
+
+  -- Formatters, selectors, accelerators
+  use({ 'godlygeek/tabular' })
+  use({ 'mbbill/undotree' })
+  use({ 'tpope/vim-commentary' })
+  use({ 'tpope/vim-endwise' })
+  use({ 'tpope/vim-projectionist' })
+  use({ 'tpope/vim-surround' })
+  use({ 'mg979/vim-visual-multi', branch = 'master' })
+
+  -- Git
+  use({ 'tpope/vim-fugitive' })
 
   if is_bootstrap then
     require('packer').sync()
