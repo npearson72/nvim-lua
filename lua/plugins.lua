@@ -26,6 +26,11 @@ require('packer').startup(function(use)
 
   use({ 'neoclide/coc.nvim', branch = 'release' })
 
+  use({
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  })
+
   use({ 'gcmt/taboo.vim' })
 
   use({ 'tpope/vim-fugitive' })
