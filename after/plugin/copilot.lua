@@ -4,5 +4,6 @@ vim.g.copilot_assume_mapped = true
 vim.keymap.set('i', '<c-l>', [[copilot#Accept('\<cr>')]], {
   silent = true,
   script = true,
-  expr = true
+  expr = true,
+  replace_keycodes = false
 })
