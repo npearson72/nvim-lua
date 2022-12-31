@@ -109,7 +109,22 @@ local options = {
   TabLineSel = {
     ctermfg = 2,
     fg = '#10a778'
-  }
+  },
+
+  -- Telescope
+  TelescopeBorder = {
+    fg = '#444444',
+  },
+
+  TelescopeSelection = {
+    fg = '#212121',
+    bg = '#a89c14',
+  },
+
+  TelescopePreviewLine = {
+    fg = '#212121',
+    bg = '#a89c14',
+  },
 }
 
 function set_highlight(options)
