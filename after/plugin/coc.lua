@@ -1,7 +1,7 @@
 ------------------------------------
 -- Globals
 ------------------------------------
-vim.g.coc_config_home = '$HOME/.dots/ansible/roles/neovim/files'
+vim.g.coc_config_home = vim.env.HOME .. '/.dots/ansible/roles/neovim/files'
 
 vim.g.python_host_prog = '/usr/bin/python'
 vim.g.python_host_prog3 = '/usr/local/bin/python3'
@@ -46,35 +46,9 @@ local function show_docs()
   end
 end
 
-local function _check_back_space()
+function _G.check_back_space()
   local col = vim.fn.col('.') - 1
   return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
-end
-
-local function pum_next()
-  if vim.api.nvim_eval('coc#pum#visible()') then
-    return vim.api.nvim_eval('coc#pum#next(1)')
-  elseif _check_back_space() then
-    return '<tab>'
-  else
-    vim.api.nvim_eval('coc#refresh()')
-  end
-end
-
-local function pum_prev()
-  if vim.api.nvim_eval('coc#pum#visible()') then
-    return vim.api.nvim_eval('coc#pum#prev(1)')
-  else
-    return '<c-h>'
-  end
-end
-
-local function pum_confirm()
-  if vim.api.nvim_eval('coc#pum#visible()') then
-    return vim.api.nvim_eval('coc#pum#confirm()')
-  else
-    return '<c-g>u<cr><c-r>=coc#on_enter()<cr>'
-  end
 end
 
 ------------------------------------
@@ -99,9 +73,26 @@ local opts = {
   replace_keycodes = false
 }
 
-vim.keymap.set('i', '<tab>', pum_next, opts)
-vim.keymap.set('i', '<s-tab>', pum_prev, opts)
-vim.keymap.set('i', '<c-j>', pum_confirm, opts)
+vim.keymap.set(
+  'i',
+  '<tab>',
+  'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<tab>" : coc#refresh()',
+  opts
+)
+
+vim.keymap.set(
+  'i',
+  '<s-tab>',
+  [[coc#pum#visible() ? coc#pum#prev(1) : "\<c-h>"]],
+  opts
+)
+
+vim.keymap.set(
+  'i',
+  '<c-j>',
+  [[coc#pum#visible() ? coc#pum#confirm() : "\<c-g>u\<cr>\<c-r>=coc#on_enter()\<cr>"]],
+  opts
+)
 
 vim.keymap.set('i', '<c-k>', 'coc#refresh()', { silent = true, expr = true })
 

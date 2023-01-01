@@ -6,7 +6,6 @@ vim.cmd('colorscheme pencil', { silent = true, bang = true })
 local options = {
   -- General
   ColorColumn = {
-    ctermbg = 235,
     bg = '#262626'
   },
 
@@ -20,7 +19,6 @@ local options = {
 
   -- Coc
   CocInfoSign = {
-    ctermfg = 03,
     fg = '#a89c14'
   },
 
@@ -30,7 +28,6 @@ local options = {
   },
 
   CocWarningSign = {
-    ctermfg = 167,
     fg = '#d75f5f'
   },
 
@@ -40,7 +37,6 @@ local options = {
   },
 
   CocErrorSign = {
-    ctermfg = 01,
     fg = '#c30771'
   },
 
@@ -50,7 +46,6 @@ local options = {
   },
 
   CocHintSign = {
-    ctermfg = 01,
     fg = '#008ec4',
   },
 
@@ -60,7 +55,6 @@ local options = {
   },
 
   CocInfoFloat = {
-    ctermfg = 251,
     fg = '#c6c6c6'
   },
 
@@ -73,17 +67,14 @@ local options = {
   },
 
   CocGitAdd = {
-    ctermfg = 2,
     fg = '#10a778'
   },
 
   CocGitChange = {
-    ctermfg = 3,
     fg = '#a89c14'
   },
 
   CocGitDelete = {
-    ctermfg = 9,
     fg = '#e32791'
   },
 
@@ -93,21 +84,16 @@ local options = {
 
   -- Taboo
   TabLine = {
-    ctermfg = 238,
-    ctermbg = 235,
     fg = '#444444',
     bg = '#262626'
   },
 
   TabLineFill = {
-    ctermfg = 235,
-    ctermbg = 235,
     fg = '#262626',
     bg = '#262626'
   },
 
   TabLineSel = {
-    ctermfg = 2,
     fg = '#10a778'
   },
 

@@ -35,6 +35,7 @@ require('packer').startup(function(use)
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
   })
+  use({ 'kchmck/vim-coffee-script' })
 
   -- File management, search, navigation
   use({

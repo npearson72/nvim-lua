@@ -20,7 +20,6 @@ pickers.cycle = function()
   })
 end
 
-
 pickers.close = function(prompt_bufnr)
   pickers.index = 1
   actions.close(prompt_bufnr)
@@ -54,9 +53,6 @@ require('telescope').setup {
       prompt_position = 'top'
     },
     mappings = {
-      n = {
-        ['<c-p>'] = action_layout.toggle_preview
-      },
       i = {
         ['<c-f>'] = {
           pickers.cycle,
