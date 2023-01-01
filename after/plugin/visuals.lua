@@ -127,8 +127,8 @@ local options = {
   },
 }
 
-function set_highlight(options)
-  for k, v in pairs(options) do
+local function set_highlight(opts)
+  for k, v in pairs(opts) do
     vim.api.nvim_set_hl(0, k, v)
   end
 end
