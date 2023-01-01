@@ -5,7 +5,11 @@
       "jumpCommand": "tabe",
       "willSaveHandlerTimeout": 5000
     },
-    "source.emoji.filetypes": null
+    "source": {
+      "emoji": {
+        "filetypes": null
+      }
+    }
   },
   "diagnostic": {
     "errorSign": "",
@@ -13,38 +17,58 @@
     "infoSign": "",
     "hintSign": ""
   },
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "eruby": "html"
+  "emmet": {
+    "includeLanguages": {
+      "javascript": "javascriptreact",
+      "eruby": "html"
+    },
+    "showSuggestionsAsSnippets": true
   },
-  "emmet.showSuggestionsAsSnippets": true,
   "eslint.run": "onType",
   "explorer": {
     "file": {
-      "reveal.auto": false,
-      "child.template": "[git | 2][selection | clip | 1][indent][icon | 1] [diagnosticError & 1][filename omitCenter 1] [readonly & 1][linkIcon & 1][link]",
-      "root.template": "[icon] [fullpath]",
-      "showHiddenFiles": true,
-      "filename.colored.enable": {
-        "diagnosticError": true,
-        "diagnosticWarning": false,
-        "git": false
-      }
+      "child": {
+        "template": "[git | 2][selection | clip | 1][indent][icon | 1] [diagnosticError & 1][filename omitCenter 1] [readonly & 1][linkIcon & 1][link]"
+      },
+      "root": {
+        "template": "[icon] [fullpath]"
+      },
+      "reveal": {
+        "auto": false
+      },
+      "filename": {
+        "colored": {
+          "enabled": {
+            "diagnosticError": true,
+            "diagnosticWarning": false,
+            "git": false
+          }
+        }
+      },
+      "showHiddenFiles": true
     },
-    "git.showIgnored": false,
-    "icon.enableNerdfont": true,
-    "keyMappings.global": {
-      "<2-LeftMouse>": "null",
-      "<Leader>e": "reveal:select",
-      "l": "null",
-      "E": "null",
-      "v": "open:vsplit"
+    "git": {
+      "showIgnored": false
+    },
+    "icon": {
+      "enableNerdfont": true
+    },
+    "keyMappings": {
+      "global": {
+        "<2-LeftMouse>": "null",
+        "<Leader>e": "reveal:select",
+        "l": "null",
+        "E": "null",
+        "v": "open:vsplit"
+      }
     },
     "openAction": {
       "relativePath": true,
       "strategy": "sourceWindow"
     },
-    "previewAction.onHover": false,
+    "previewAction": {
+      "onHover": false
+    },
     "quitOnOpen": true,
     "sources": [
       {
@@ -54,18 +78,38 @@
     ]
   },
   "git": {
-    "addedSign.hlGroup": "CocGitAdd",
-    "changedSign.hlGroup": "CocGitChange",
-    "removedSign.hlGroup": "CocGitDelete",
-    "topRemovedSign.hlGroup": "CocGitDelete",
-    "changeRemovedSign.hlGroup": "CocGitDeleteChange",
-    "changedSign.text": "!"
+    "addedSign": {
+      "hlGroup": "CocGitAdd"
+    },
+    "changedSign": {
+      "hlGroup": "CocGitChange",
+      "text": "!"
+    },
+    "removedSign": {
+      "hlGroup": "CocGitDelete"
+    },
+    "topRemovedSign": {
+      "hlGroup": "CocGitDelete"
+    },
+    "changeRemovedSign": {
+      "hlGroup": "CocGitDeleteChange"
+    }
   },
   "javascript.suggestionActions.enabled": false,
-  "Lua.runtime.version": "LuaJIT",
-  "Lua.workspace.checkThirdParty": false,
-  "Lua.hint.enable": false,
-  "Lua.telemetry.enable": false,
+  "Lua": {
+    "runtime": {
+      "version": "LuaJIT"
+    },
+    "workspace": {
+      "checkThirdParty": false
+    },
+    "hint": {
+      "enable": false
+    },
+    "telemetry": {
+      "enable": false
+    }
+  },
   "prettier": {
     "arrowParens": "avoid",
     "endOfLine": "auto",
@@ -73,9 +117,11 @@
     "singleQuote": true,
     "trailingComma": "none"
   },
-  "snippets.extends": {
-    "typescriptreact": ["javascript"],
-    "typescript": ["javascript"]
+  "snippets": {
+    "extends": {
+      "typescriptreact": ["javascript"],
+      "typescript": ["javascript"]
+    }
   },
   "solargraph": {
     "diagnostics": true,
