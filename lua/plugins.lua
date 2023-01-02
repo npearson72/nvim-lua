@@ -29,12 +29,6 @@ require('packer').startup(function(use)
   use({ 'gcmt/taboo.vim' })
 
   -- Syntax highlighting
-  use({
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-      pcall(require('nvim-treesitter.install').update { with_sync = true })
-    end,
-  })
   use({ 'kchmck/vim-coffee-script' })
 
   -- File management, search, navigation

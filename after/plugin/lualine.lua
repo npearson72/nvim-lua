@@ -46,7 +46,7 @@ local function position()
   return [[%l/%L:%c  %p%%]]
 end
 
-require('lualine').setup {
+require('lualine').setup({
   options = {
     theme = pencil_dark,
     component_separators = { left = '', right = '' },
@@ -70,4 +70,4 @@ require('lualine').setup {
   },
   tabline = {},
   extensions = {},
-}
+})
