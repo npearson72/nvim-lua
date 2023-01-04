@@ -30,6 +30,7 @@ require('packer').startup(function(use)
 
   -- Syntax highlighting
   use({ 'kchmck/vim-coffee-script' })
+  use({ 'sheerun/vim-polyglot' })
 
   -- File management, search, navigation
   use({
