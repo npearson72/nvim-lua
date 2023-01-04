@@ -21,12 +21,12 @@ require('packer').startup(function(use)
   use({ 'wbthomason/packer.nvim' })
 
   -- UI/UX
-  use({ 'preservim/vim-colors-pencil' })
+  use({ 'gcmt/taboo.vim' })
   use({
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   })
-  use({ 'gcmt/taboo.vim' })
+  use({ 'preservim/vim-colors-pencil' })
 
   -- Syntax highlighting
   use({ 'kchmck/vim-coffee-script' })
@@ -49,11 +49,12 @@ require('packer').startup(function(use)
   -- Formatters, selectors, accelerators
   use({ 'godlygeek/tabular' })
   use({ 'mbbill/undotree' })
+  use({ 'mg979/vim-visual-multi', branch = 'master' })
+  use({ 'suy/vim-context-commentstring' })
   use({ 'tpope/vim-commentary' })
   use({ 'tpope/vim-endwise' })
   use({ 'tpope/vim-projectionist' })
   use({ 'tpope/vim-surround' })
-  use({ 'mg979/vim-visual-multi', branch = 'master' })
 
   -- Git
   use({ 'tpope/vim-fugitive' })
