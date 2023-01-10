@@ -51,3 +51,9 @@ vim.keymap.set('v', '<s-k>', ':m-2<cr>gv')
 -- Keep search matches in the middle of the window
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- Folding
+vim.keymap.set('n', '<space>', [[@=(foldlevel('.') ? 'za' : "\<space>")<cr>]], {
+  silent = true
+})
+vim.keymap.set('v', '<space>', "zf", { silent = true })
