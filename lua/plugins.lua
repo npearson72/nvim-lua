@@ -29,7 +29,6 @@ require('packer').startup(function(use)
   use({ 'preservim/vim-colors-pencil' })
 
   -- Syntax highlighting
-  use({ 'kchmck/vim-coffee-script' })
   use({ 'sheerun/vim-polyglot' })
 
   -- File management, search, navigation
